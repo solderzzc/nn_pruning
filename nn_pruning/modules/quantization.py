@@ -14,10 +14,10 @@ from torch.quantization.quantize_fx import (
 )
 from transformers import __version__ as transformers_version
 
-if transformers_version > '4.7.0':
-    from transformers.utils.fx import symbolic_trace
-else:
-    from transformers.modeling_fx_utils import symbolic_trace
+# if transformers_version > '4.7.0':
+from transformers.utils.fx import symbolic_trace
+#else:
+#    from transformers.modeling_fx_utils import symbolic_trace
 
 from .quantization_config import create_qconfig
 
